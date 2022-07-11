@@ -1,6 +1,19 @@
 <app-sounds></app-sounds>
 <div class="background center">
-  <div class="container">
-    <button type="button" class="btn btn-primary btn-lg">Start</button>
+  <div class="container-fluid">
+    <img
+      [@appear]="isOn ? 'on' : 'off'"
+      class="logo"
+      src="../../../assets/logo/Pokemon-logo.svg"
+      alt="logo"
+    />
+    <button
+      [@display]="isDisplayed ? 'yes' : 'no'"
+      (click)="toggle()"
+      type="button"
+      class="btn btn-primary btn-lg"
+    >
+      Start
+    </button>
   </div>
 </div>

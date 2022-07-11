@@ -11,9 +11,15 @@
     justify-content: center;
 }
 
-.container {
+.logo {
+    position: relative;
+    left: -15px;
+    width: 60%;
+    height: 60%;
+}
+
+.container-fluid {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    /* background-color: azure; */
 }
