@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StartComponent } from './screens/start/start.component';
-import { CombatComponent } from './screens/combat/combat.component';
+import { BattleComponent } from './screens/battle/battle.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/start', pathMatch:'full' },
   { path: 'start', component: StartComponent},
-  { path: 'combat', component: CombatComponent},
+  { path: 'battle', component: BattleComponent},
 ];
 
 @NgModule({

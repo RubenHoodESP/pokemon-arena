@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
   selector: 'app-start',
@@ -45,13 +46,14 @@ export class StartComponent implements OnInit {
   isOn = false;
   isDisplayed = true;
 
-  constructor() { }
+  constructor(private pokemonService: PokemonService) {}
 
   ngOnInit(): void {
+    this.pokemonService.getPokemonByName("bulbasaur");
   }
+
   toggle() {
     this.isOn = !this.isOn;
     this.isDisplayed = !this.isDisplayed;
   }
-
 }
