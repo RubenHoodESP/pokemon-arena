@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StartComponent } from './screens/start/start.component';
 import { SoundsComponent } from './components/sounds/sounds.component';
-import { OpenCloseComponent } from './open-close/open-close.component';
+import { OpenCloseComponent } from './components/open-close/open-close.component';
 import { BattleComponent } from './screens/battle/battle.component';
 
 @NgModule({
