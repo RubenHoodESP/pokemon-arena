@@ -1,0 +1,46 @@
+<div *ngIf="start" class="d-grid gap-4">
+  <button type="button" class="start btn btn-bd-{{ theme }} btn-block">
+    {{ "START.start" | translate }}
+  </button>
+  <button
+    type="button"
+    class="settings btn btn-bd-{{ theme }}"
+    (click)="goSettings()"
+  >
+    {{ "START.settings" | translate }}
+  </button>
+</div>
+<div *ngIf="settings" class="d-grid gap-4">
+  <button type="button" class="btn btn-bd-{{ theme }}" (click)="goStart()">
+    {{ "COMMON.back" | translate }}
+  </button>
+  <button
+    type="button"
+    class="start btn btn-bd-{{ theme }} btn-block"
+    (click)="goLanguages()"
+  >
+    {{ "SETTINGS.language" | translate }}
+  </button>
+  <button type="button" class="settings btn btn-bd-{{ theme }}">
+    {{ "SETTINGS.theme" | translate }}
+  </button>
+</div>
+<div *ngIf="languages" class="d-grid gap-4">
+  <button type="button" class="btn btn-bd-{{ theme }}" (click)="goSettings()">
+    {{ "COMMON.back" | translate }}
+  </button>
+  <button
+    type="button"
+    class="start btn btn-bd-{{ theme }} btn-block"
+    (click)="useLanguage('en')"
+  >
+    {{ "LANGUAGE.english" | translate }}
+  </button>
+  <button
+    type="button"
+    class="settings btn btn-bd-{{ theme }}"
+    (click)="useLanguage('es')"
+  >
+    {{ "LANGUAGE.spanish" | translate }}
+  </button>
+</div>

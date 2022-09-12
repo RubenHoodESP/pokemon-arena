@@ -1,19 +1,15 @@
 <app-sounds></app-sounds>
 <div class="background center">
   <div class="container-fluid">
-    <img
-      [@appear]="isOn ? 'on' : 'off'"
-      class="logo"
-      src="../../../assets/logo/Pokemon-logo.svg"
-      alt="logo"
-    />
-    <button
-      [@display]="isDisplayed ? 'yes' : 'no'"
-      (click)="toggle()"
-      type="button"
-      class="btn btn-primary btn-lg"
-    >
-      Start
-    </button>
+    <img class="logo" src="../../../assets/logo/Pokemon-logo.svg" alt="logo" />
+    <div *ngIf="start">
+      <app-ui-button [start]="true" (click)="toggle()"></app-ui-button>
+    </div>
+    <div *ngIf="settings">
+      <app-ui-button [settings]="true" (click)="toggle()"></app-ui-button>
+    </div>
+    <div *ngIf="languages">
+      <app-ui-button [languages]="true" (click)="toggle()"></app-ui-button>
+    </div>
   </div>
 </div>

@@ -1,0 +1,17 @@
+{
+    "COMMON": {
+        "back": "Atrás"
+    },
+    "START": {
+        "start": "Empezar",
+        "settings": "Ajustes"
+    },
+    "SETTINGS": {
+        "language": "Idioma",
+        "theme": "Aspecto"
+    },
+    "LANGUAGE": {
+        "english": "Inglés",
+        "spanish": "Español"
+    }
+}

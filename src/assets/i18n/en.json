@@ -1,0 +1,17 @@
+{
+    "COMMON": {
+        "back": "Back"
+    },
+    "START": {
+        "start": "Start",
+        "settings": "Settings"
+    },
+    "SETTINGS": {
+        "language": "Language",
+        "theme": "Theme"
+    },
+    "LANGUAGE": {
+        "english": "English",
+        "spanish": "Spanish"
+    }
+}

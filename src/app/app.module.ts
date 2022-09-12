@@ -8,6 +8,10 @@ import { StartComponent } from './screens/start/start.component';
 import { SoundsComponent } from './components/sounds/sounds.component';
 import { OpenCloseComponent } from './components/open-close/open-close.component';
 import { BattleComponent } from './screens/battle/battle.component';
+import { UiButtonComponent } from './components/ui-button/ui-button.component';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,14 +19,29 @@ import { BattleComponent } from './screens/battle/battle.component';
     StartComponent,
     SoundsComponent,
     OpenCloseComponent,
-    BattleComponent
+    BattleComponent,
+    UiButtonComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserModule,
+        // ngx-translate and the loader module
+        HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}

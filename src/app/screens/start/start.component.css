@@ -23,3 +23,7 @@
     flex-direction: column;
     align-items: center;
 }
+
+app-ui-button {
+    width: 100%;
+}
